@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var amount = prompt("Enter amount: ");
+        let discount = 0;
+        if (amount >= 500) {
+            discount = 0.20;
+            let after_discount = amount - (amount * discount)
+            console.log(after_discount);
+        }
+        else if (amount >= 300 && amount < 500) {
+            discount = 0.15;
+            let after_discount = amount - (amount * discount)
+            console.log(after_discount);
+        }
+        else if (amount >= 100 && amount < 299) {
+            discount = 0.10;
+            let after_discount = amount - (amount * discount)
+            console.log(after_discount);
+        }
+        else if (amount < 100) {
+            discount = 0.05;
+            let after_discount = amount - (amount * discount)
+            console.log(after_discount)
+        }
+        else {
+            console.log("No discount");
+        }
+    </script>
+</body>
+</html>

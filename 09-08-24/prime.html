@@ -1,0 +1,28 @@
+<!--2.print only prime numbers between 100 and 200-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+ <h1>2.Print only prime numbers between 100 & 200</h1>
+<body>
+    <script>
+       
+        for (i = 100; i <= 200; i++) {
+            count = 0;
+            for (j = 100; j < i; j++) {
+                if (i % 2 == 0) {
+                    count++;
+                }
+            }
+            if (count == 0) {
+                console.log(i);
+            }
+        }
+    </script>
+</body>
+
+</html>
