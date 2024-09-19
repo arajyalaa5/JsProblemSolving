@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 2.Calculate the least marks and add it to the object
+        let obj = [{ name: "ramu", marks: { s1: 28, s2: 30, s3: 49 } },
+        { name: "raju", marks: { s1: 20, s2: 50, s3: 40 } },
+        { name: "raghu", marks: { s1: 35, s2: 30, s3: 47 } },
+        ];
+
+        var count = 0;
+        for (i of obj) {
+            for (j in i) {
+                if (j == "marks") {
+                    let min = i[j]["s1"]
+                    for (k in i[j]) {
+                        if (min > i[j][k]) {
+                            min = i[j][k]
+                        }
+                    }
+
+                    for (k in i[j]) {
+                        if (i[j][k] == min) {
+                            //console.log(k);
+                            i["subject"] = k;
+                        }
+                    }
+                }
+            }
+        }
+        console.log(obj)
+    </script>
+</body>
+
+</html>

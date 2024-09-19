@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1.Calculate the avg of marks and add it to the object
+        let obj = [{ name: "ramu", marks: { s1: 28, s2: 30, s3: 49 } },
+        { name: "raju", marks: { s1: 20, s2: 50, s3: 40 } },
+        { name: "raghu", marks: { s1: 35, s2: 30, s3: 47 } },
+        ];
+
+        var count = 0;
+        for (i of obj) {
+            for (j in i) {
+                if (j == "marks") {
+                    var sum = 0, avg = 0, count = 0;
+                    for (k in i[j]) {
+                        sum = sum + i[j][k]
+                        count++;
+                        avg = sum / count
+                    }
+
+                    i["avg"] = Math.floor(avg)
+                }
+            }
+        }
+        console.log(obj)
+    </script>
+</body>
+
+</html>
