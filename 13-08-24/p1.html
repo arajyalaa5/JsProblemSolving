@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Take  a number from user and iterate through it, if the digit is a prime print "prime that times
+        // Eg: 4593
+        // o/p: 4 "prime" "prime""prime""prime""prime" 9 "prime""prime""prime"
+        var num = "4593"
+
+for(var i of num)
+{    
+    var count =0;
+    for(j=2;j<i;j++)
+    {
+        if(i%j==0)
+        {
+            count++;
+            break;
+        }
+     
+    }
+
+    
+    if(count==0)
+    {
+        for(k=0;k<i;k++)
+        {
+            console.log("prime")
+        }
+    }
+    else{
+        console.log(i)
+    }
+}
+
+    </script>
+</body>
+
+</html>
